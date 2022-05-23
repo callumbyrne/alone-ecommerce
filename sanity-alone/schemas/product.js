@@ -20,7 +20,11 @@ export default {
     {
       name: 'slug',
       title: 'Slug',
-      type: 'string',
+      type: 'slug',
+      options: {
+        source: 'name',
+        maxLength: 90,
+      },
     },
     {
       name: 'price',
