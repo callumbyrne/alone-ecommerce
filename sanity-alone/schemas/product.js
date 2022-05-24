@@ -18,6 +18,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'variant',
+      title: 'Variant',
+      type: 'string',
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',

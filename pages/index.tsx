@@ -1,9 +1,16 @@
-import { HeroBanner, Marquee, Newsletter, ProductCarousel } from '../components'
+import {
+  HeroBanner,
+  FeatureBanner,
+  Marquee,
+  Newsletter,
+  ProductCarousel,
+} from '../components'
 
 const Home = () => {
   return (
     <div>
       <HeroBanner />
+      <FeatureBanner />
     </div>
   )
 }
