@@ -1,20 +1,25 @@
 import Image from 'next/image'
 import swing from '../public/swing.png'
+import heroImage from '../public/glasses_pool.png'
+import star from '../public/star.gif'
 
 const HeroBanner = () => {
   return (
     <div className="">
       <div className="relative h-[400px]">
         <Image
-          src={swing}
+          src={heroImage}
           alt="hero image"
           layout="fill"
           objectFit="cover"
           objectPosition="center"
         />
       </div>
-      <div className="flex items-center justify-center">
-        <button className="-translate-y-9 rounded-lg bg-[#ffe783] py-5 px-4 text-lg font-bold tracking-wider text-gray-800">
+      <div className="flex flex-col items-center justify-center">
+        <div className="absolute -translate-y-[100px]">
+          <Image src={star} alt="spinning star" height={80} width={80} />
+        </div>
+        <button className="w-56 -translate-y-9 rounded-lg bg-[#ffe783] py-5 px-4 text-lg font-bold tracking-wider text-gray-800">
           Explore Collection
         </button>
       </div>

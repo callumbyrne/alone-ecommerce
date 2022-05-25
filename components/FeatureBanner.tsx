@@ -4,7 +4,7 @@ import image2 from '../public/smoking.png'
 
 const FeatureBanner = () => {
   return (
-    <div className="bg-[#d3d327]">
+    <div className="mb-12 bg-[#d3d327]">
       <div className="relative mx-7 h-[450px] -translate-y-3">
         <Image
           src={image1}
@@ -15,8 +15,8 @@ const FeatureBanner = () => {
         />
       </div>
       <div className="flex items-center justify-center">
-        <button className="-translate-y-11 rounded-lg bg-[#ca9cff] py-5 px-4 text-lg font-bold tracking-wider text-gray-800">
-          Explore Collection
+        <button className="w-56 -translate-y-11 rounded-lg bg-[#ca9cff] py-5 px-4 text-lg font-bold tracking-wider text-gray-800">
+          Featured
         </button>
       </div>
       <div className="relative mx-7 h-[450px] translate-y-3">
@@ -29,8 +29,8 @@ const FeatureBanner = () => {
         />
 
         <div className="flex h-full items-end justify-center">
-          <button className="translate-y-8 rounded-lg bg-[#e6ff7b] py-5 px-4 text-lg font-bold tracking-wider text-gray-800">
-            Explore Collection
+          <button className="w-56 translate-y-8 rounded-lg bg-[#e6ff7b] py-5 px-4 text-lg font-bold tracking-wider text-gray-800">
+            Best Sellers
           </button>
         </div>
       </div>
