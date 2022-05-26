@@ -13,6 +13,7 @@ const HeroBanner = () => {
           layout="fill"
           objectFit="cover"
           objectPosition="center"
+          priority
         />
       </div>
       <div className="flex flex-col items-center justify-center">
