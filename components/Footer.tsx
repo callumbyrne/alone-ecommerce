@@ -1,3 +1,6 @@
+import Image from 'next/image'
+import logo from '../public/logo.png'
+
 const Footer = () => {
   return (
     <div className="bg-[#f0f1f2] pt-20 text-center text-lg tracking-widest">
@@ -19,7 +22,10 @@ const Footer = () => {
         </ul>
       </div>
 
-      <div className="bg-[#545454] py-20 text-white">
+      <div className="flex flex-col items-center bg-[#545454] py-20 text-white">
+        <div className="block w-32 cursor-pointer pb-5">
+          <Image src={logo} alt="logo" layout="responsive" objectFit="cover" />
+        </div>
         <h2 className="pb-2 font-bold">Support</h2>
         <ul className="font-normal leading-relaxed">
           <li>fake@aloneeyewear.com</li>

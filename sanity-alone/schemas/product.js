@@ -1,3 +1,5 @@
+import { bool } from 'prop-types'
+
 export default {
   name: 'product',
   title: 'Product',
@@ -40,6 +42,11 @@ export default {
       name: 'details',
       title: 'Details',
       type: 'string',
+    },
+    {
+      name: 'carousel',
+      title: 'Carousel',
+      type: 'boolean',
     },
   ],
 }
