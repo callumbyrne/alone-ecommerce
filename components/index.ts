@@ -1,7 +1,7 @@
 export { default as Footer } from './Footer'
 export { default as Layout } from './Layout'
 export { default as Navbar } from './Navbar'
-export { default as ProductCard } from './ProductCard'
+export { default as CarouselCard } from './CarouselCard'
 export { default as HeroBanner } from './HeroBanner'
 export { default as Newsletter } from './Newsletter'
 export { default as Cart } from './Cart'

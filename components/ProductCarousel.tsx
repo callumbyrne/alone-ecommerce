@@ -1,5 +1,5 @@
 import { IProducts } from '../typeings'
-import ProductCard from './ProductCard'
+import ProductCard from './CarouselCard'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper'
 
@@ -7,10 +7,6 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 
 const ProductCarousel = ({ products }: IProducts) => {
-  const carouselProducts = products.filter(
-    (product) => product.carousel === true
-  )
-
   return (
     <div className="mt-10 mb-20">
       <h2 className="pb-5 text-center text-2xl font-bold tracking-wider">
@@ -40,7 +36,7 @@ const ProductCarousel = ({ products }: IProducts) => {
           },
         }}
       >
-        {carouselProducts.map((product) => (
+        {products.map((product) => (
           <SwiperSlide key={product._id}>
             <ProductCard product={product} />
           </SwiperSlide>

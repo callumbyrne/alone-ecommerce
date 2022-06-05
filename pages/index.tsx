@@ -5,7 +5,6 @@ import {
   Marquee,
   Newsletter,
   ProductCarousel,
-  ProductCard,
 } from '../components'
 import { IProducts } from '../typeings'
 
@@ -22,7 +21,7 @@ const Home = ({ products }: IProducts) => {
 }
 
 export const getServerSideProps = async () => {
-  const query = `*[_type == "product"]{
+  const query = `*[_type == "product" && carousel == true]{
     _id,
     details,
     image,
