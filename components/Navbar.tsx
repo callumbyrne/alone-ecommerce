@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <>
       <div className="flex h-7 items-center justify-center bg-[#f6cbff] text-xs font-medium tracking-wider">
-        Wear Alone, alone or with friends!
+        Wear Alone, or with friends!
       </div>
       <div className="flex flex-row justify-between py-4 px-4">
         <button className="flex items-center justify-center">
