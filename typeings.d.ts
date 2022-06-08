@@ -6,6 +6,7 @@ export interface IProduct {
       asset: {
         _ref: string
       }
+      _key: string
     }
   ]
   name: string

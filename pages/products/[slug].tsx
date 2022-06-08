@@ -1,19 +1,23 @@
+import { useState } from 'react'
 import { sanityClient } from '../../lib/client'
 import { IProduct, IParams, ISlug } from '../../typeings'
 import Image from 'next/image'
 import { urlFor } from '../../lib/client'
+import PreviewCarousel from '../../components/PreviewCarousel'
 
 interface Props {
   product: IProduct
 }
 
 const ProductDetails = ({ product }: Props) => {
+  const [mainImage, setMainImage] = useState(product.image[0])
+  console.log(product.image)
   return (
     <div>
       {/* Main image */}
       <div className="relative h-[300px]">
         <Image
-          src={urlFor(product.image[0]).url()}
+          src={urlFor(mainImage).url()}
           alt={product.name}
           layout="fill"
           objectFit="cover"
@@ -22,6 +26,7 @@ const ProductDetails = ({ product }: Props) => {
         />
       </div>
       {/* Image previews */}
+      <PreviewCarousel images={product.image} setMainImage={setMainImage} />
       {/* Details */}
       {/* Carousel */}
       {/* Shop All */}
