@@ -7,12 +7,14 @@ import pool from '../../public/pool.png'
 import fire from '../../public/fire.gif'
 
 const AllPage = ({ products }: IProducts) => {
-  const sortedProducts = products.sort((a, b) => (a.name > b.name ? 1 : -1))
   const halfIndex = products.length / 2 - 1
-  const firstHalfProducts = products.filter((product, index) => {
+  const sortedProducts = [...products].sort((a, b) =>
+    a.name > b.name ? 1 : -1
+  )
+  const firstHalfProducts = sortedProducts.filter((product, index) => {
     if (index <= halfIndex) return product
   })
-  const secondHalfProducts = products.filter((product, index) => {
+  const secondHalfProducts = sortedProducts.filter((product, index) => {
     if (index > halfIndex) return product
   })
 

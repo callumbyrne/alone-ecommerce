@@ -1,5 +1,5 @@
 import { IProducts } from '../typeings'
-import ProductCard from './CarouselCard'
+import CarouselCard from './CarouselCard'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper'
 
@@ -38,7 +38,7 @@ const ProductCarousel = ({ products }: IProducts) => {
       >
         {products.map((product) => (
           <SwiperSlide key={product._id}>
-            <ProductCard product={product} />
+            <CarouselCard product={product} />
           </SwiperSlide>
         ))}
       </Swiper>

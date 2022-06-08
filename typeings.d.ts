@@ -20,3 +20,15 @@ export interface IProduct {
 export interface IProducts {
   products: [IProduct]
 }
+
+export interface IParams {
+  params: {
+    slug: string
+  }
+}
+
+export interface ISlug {
+  slug: {
+    current: string
+  }
+}
