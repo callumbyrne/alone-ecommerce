@@ -2,6 +2,7 @@ import Image from 'next/image'
 import swing from '../public/swing.png'
 import heroImage from '../public/glasses_pool.png'
 import star from '../public/star.gif'
+import Link from 'next/link'
 
 const HeroBanner = () => {
   return (
@@ -20,9 +21,11 @@ const HeroBanner = () => {
         <div className="absolute -translate-y-[100px]">
           <Image src={star} alt="spinning star" height={80} width={80} />
         </div>
-        <button className="w-56 -translate-y-9 rounded-lg bg-[#ffe783] py-5 px-4 text-lg font-bold tracking-wider text-gray-800">
-          Explore Collection
-        </button>
+        <Link href={'/collections/all'}>
+          <button className="w-56 -translate-y-9 rounded-lg bg-[#ffe783] py-5 px-4 text-lg font-bold tracking-wider text-gray-800">
+            Explore Collection
+          </button>
+        </Link>
       </div>
       <div className="px-7 pb-20">
         <h2 className="mb-1 text-4xl font-bold tracking-wider">Wear Alone,</h2>

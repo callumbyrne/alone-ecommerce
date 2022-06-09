@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import image1 from '../public/twoglassesblue.png'
 import image2 from '../public/smoking.png'
+import Link from 'next/link'
 
 const FeatureBanner = () => {
   return (
@@ -15,9 +16,11 @@ const FeatureBanner = () => {
         />
       </div>
       <div className="flex items-center justify-center">
-        <button className="w-56 -translate-y-11 rounded-lg bg-[#ca9cff] py-5 px-4 text-lg font-bold tracking-wider text-gray-800">
-          Featured
-        </button>
+        <Link href={'/collections/all'}>
+          <button className="w-56 -translate-y-11 rounded-lg bg-[#ca9cff] py-5 px-4 text-lg font-bold tracking-wider text-gray-800">
+            Featured
+          </button>
+        </Link>
       </div>
       <div className="relative mx-7 h-[450px] translate-y-3">
         <Image
@@ -29,9 +32,11 @@ const FeatureBanner = () => {
         />
 
         <div className="flex h-full items-end justify-center">
-          <button className="w-56 translate-y-8 rounded-lg bg-[#e6ff7b] py-5 px-4 text-lg font-bold tracking-wider text-gray-800">
-            Best Sellers
-          </button>
+          <Link href={'/collections/all'}>
+            <button className="w-56 translate-y-8 rounded-lg bg-[#e6ff7b] py-5 px-4 text-lg font-bold tracking-wider text-gray-800">
+              Best Sellers
+            </button>
+          </Link>
         </div>
       </div>
     </div>
