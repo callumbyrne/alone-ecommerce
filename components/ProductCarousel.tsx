@@ -1,4 +1,4 @@
-import { IProducts } from '../typeings'
+import { IProduct } from '../typeings'
 import CarouselCard from './CarouselCard'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper'
@@ -6,11 +6,16 @@ import { Navigation } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
 
-const ProductCarousel = ({ products }: IProducts) => {
+interface Props {
+  products: [IProduct]
+  text: string
+}
+
+const ProductCarousel = ({ products, text }: Props) => {
   return (
-    <div className="mt-10 mb-20">
-      <h2 className="pb-5 text-center text-2xl font-bold tracking-wider">
-        Trending:
+    <div className="mt-10 mb-10">
+      <h2 className="pb-5 text-center text-3xl font-bold tracking-wider">
+        {text}
       </h2>
       <Swiper
         slidesPerView={1}

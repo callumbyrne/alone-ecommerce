@@ -39,3 +39,8 @@ body {
 .swiper-button-next {
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
 }
+
+.shopAll {
+  background-image: url('../public/palms.png');
+  background-size: cover;
+}

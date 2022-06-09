@@ -14,7 +14,7 @@ const Home = ({ products }: IProducts) => {
       <HeroBanner />
       <FeatureBanner />
       <Marquee />
-      <ProductCarousel products={products} />
+      <ProductCarousel products={products} text="Trending:" />
       <Newsletter />
     </div>
   )

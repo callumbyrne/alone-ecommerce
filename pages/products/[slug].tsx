@@ -5,10 +5,12 @@ import Image from 'next/image'
 import { urlFor } from '../../lib/client'
 import PreviewCarousel from '../../components/PreviewCarousel'
 import Link from 'next/link'
+import ProductCarousel from '../../components/ProductCarousel'
+import palms from '../../public/palms.png'
 
 interface Props {
   product: IProduct
-  carouselProducts: IProduct[]
+  carouselProducts: [IProduct]
   variants: IProduct[]
 }
 
@@ -55,7 +57,7 @@ const ProductDetails = ({ product, carouselProducts, variants }: Props) => {
         <div className="my-5 border-t border-gray-400"></div>
       </div>
       {/* Variants */}
-      <div className="mx-10">
+      <div className="mx-10 mb-5">
         <h2 className="font-bold tracking-wider">More colors:</h2>
         <div className="flex flex-row flex-wrap">
           {filteredVariants.map((variant) => (
@@ -74,11 +76,24 @@ const ProductDetails = ({ product, carouselProducts, variants }: Props) => {
           ))}
         </div>
       </div>
-      {/* Carousel */}
-      <div>
-        <h2>You Might Also Like...</h2>
-      </div>
       {/* Shop All */}
+      <div className="shopAll flex h-[250px] flex-col items-center justify-center">
+        <h2 className="pb-3 text-2xl font-bold text-white drop-shadow-[1px_1px_black]">
+          Looking for something else?
+        </h2>
+        <Link href={'/collections/all'}>
+          <button className="w-56 rounded-lg bg-[#e6ff7b] py-5 px-4 text-lg font-bold tracking-wider shadow-[2px_2px_black]">
+            Shop All
+          </button>
+        </Link>
+      </div>
+      {/* Carousel */}
+      <div className="py-5">
+        <ProductCarousel
+          products={carouselProducts}
+          text="You Might Also Like..."
+        />
+      </div>
     </div>
   )
 }
