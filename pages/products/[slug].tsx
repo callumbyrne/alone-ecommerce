@@ -18,7 +18,7 @@ const ProductDetails = ({ product, carouselProducts, variants }: Props) => {
   const [mainImage, setMainImage] = useState(product.image[0])
 
   // sets proper image when switching products
-  useEffect(() => setMainImage(product.image[0]))
+  useEffect(() => setMainImage(product.image[0]), [product])
 
   const filteredVariants = variants.filter(
     (variant) => variant._id !== product._id
@@ -61,7 +61,7 @@ const ProductDetails = ({ product, carouselProducts, variants }: Props) => {
         <h2 className="font-bold tracking-wider">More colors:</h2>
         <div className="flex flex-row flex-wrap">
           {filteredVariants.map((variant) => (
-            <Link href={`/products/${variant.slug.current}`}>
+            <Link key={variant._id} href={`/products/${variant.slug.current}`}>
               <div className="relative h-[100px] w-[150px]">
                 <Image
                   src={urlFor(variant.image[0]).url()}
