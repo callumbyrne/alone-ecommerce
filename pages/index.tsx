@@ -5,6 +5,7 @@ import {
   Marquee,
   Newsletter,
   ProductCarousel,
+  Cart,
 } from '../components'
 import { IProducts } from '../typeings'
 
@@ -16,6 +17,7 @@ const Home = ({ products }: IProducts) => {
       <Marquee />
       <ProductCarousel products={products} text="Trending:" />
       <Newsletter />
+      <Cart />
     </div>
   )
 }
