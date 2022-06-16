@@ -7,6 +7,7 @@ import PreviewCarousel from '../../components/PreviewCarousel'
 import Link from 'next/link'
 import ProductCarousel from '../../components/ProductCarousel'
 import palms from '../../public/palms.png'
+import { useStateContext } from '../../context/StateContext'
 
 interface Props {
   product: IProduct
@@ -17,6 +18,8 @@ interface Props {
 const ProductDetails = ({ product, carouselProducts, variants }: Props) => {
   const [mainImage, setMainImage] = useState(product.image[0])
   const [qty, setQty] = useState(1)
+
+  const { onAdd } = useStateContext()
 
   // sets proper image when switching products
   useEffect(() => setMainImage(product.image[0]), [product])
@@ -67,7 +70,10 @@ const ProductDetails = ({ product, carouselProducts, variants }: Props) => {
           </select>
         </div>
         <div className="flex items-center justify-center">
-          <button className="w-full rounded-lg bg-black py-4 font-bold tracking-wider text-white">
+          <button
+            className="w-full rounded-lg bg-black py-4 font-bold tracking-wider text-white"
+            onClick={() => onAdd(product, qty)}
+          >
             Add To Cart
           </button>
         </div>

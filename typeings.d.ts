@@ -1,4 +1,5 @@
 export interface IProduct {
+  quantity: number
   carousel: boolean
   details: string
   image: [
@@ -15,7 +16,7 @@ export interface IProduct {
   }
   variant: string
   _id: string
-  price: string
+  price: number
 }
 
 export interface IProducts {

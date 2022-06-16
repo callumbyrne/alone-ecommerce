@@ -33,7 +33,7 @@ const Navbar = () => {
         >
           <ShoppingBagIcon className="h-7 w-7 hover:scale-110" />
           <span className="absolute -right-2 top-2 flex h-5 w-5 items-center justify-center rounded-full bg-[#f02d34] text-xs font-semibold text-[#eee]">
-            0
+            {totalQuantities}
           </span>
         </button>
       </div>
