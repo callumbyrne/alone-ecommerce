@@ -16,6 +16,7 @@ interface Props {
 
 const ProductDetails = ({ product, carouselProducts, variants }: Props) => {
   const [mainImage, setMainImage] = useState(product.image[0])
+  const [qty, setQty] = useState(1)
 
   // sets proper image when switching products
   useEffect(() => setMainImage(product.image[0]), [product])
@@ -48,6 +49,22 @@ const ProductDetails = ({ product, carouselProducts, variants }: Props) => {
         <p>{product.details}</p>
         <div className="py-5 text-xl font-bold tracking-wider">
           ${product.price}.00
+        </div>
+        <div className="pb-5">
+          <label htmlFor="quantity" className="pr-3 font-semibold">
+            Qty:
+          </label>
+          <select
+            name="quantity"
+            id="quantity"
+            onChange={(e) => setQty(parseInt(e.target.value))}
+          >
+            {[1, 2, 3, 4, 5].map((value) => (
+              <option key={value} value={value}>
+                {value}
+              </option>
+            ))}
+          </select>
         </div>
         <div className="flex items-center justify-center">
           <button className="w-full rounded-lg bg-black py-4 font-bold tracking-wider text-white">
