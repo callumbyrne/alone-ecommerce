@@ -17,7 +17,6 @@ const Home = ({ products }: IProducts) => {
       <Marquee />
       <ProductCarousel products={products} text="Trending:" />
       <Newsletter />
-      <Cart />
     </div>
   )
 }
