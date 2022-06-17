@@ -17,6 +17,8 @@ interface IContext {
   totalPrice: number
   setShowCart: React.Dispatch<React.SetStateAction<boolean>>
   onAdd: (product: IProduct, qty: number) => void
+  onRemove: (product: IProduct) => void
+  toggleCartItemQuantity: (id: string, value: 'inc' | 'dec') => void
 }
 
 const Context = createContext({} as IContext)
@@ -56,6 +58,51 @@ export const StateContext = ({ children }: Props) => {
     }
   }
 
+  const onRemove = (product: IProduct) => {
+    const foundProduct = cartItems.find((item) => item._id === product._id)
+    const updatedCartItems = cartItems.filter(
+      (item) => item._id !== product._id
+    )
+
+    if (foundProduct) {
+      setTotalPrice(totalPrice - foundProduct.price * foundProduct.quantity)
+      setTotalQuantities(totalQuantities - foundProduct.quantity)
+      setCartItems(updatedCartItems)
+      toast.success(`${foundProduct.name} was removed`)
+    }
+  }
+
+  const toggleCartItemQuantity = (id: string, value: 'inc' | 'dec') => {
+    const foundProduct = cartItems.find((item) => item._id === id)
+
+    if (foundProduct) {
+      if (value === 'inc') {
+        const updatedCartItems = cartItems.map((item) => {
+          if (item._id === id) {
+            return { ...item, quantity: item.quantity + 1 }
+          }
+          return item
+        })
+        setCartItems(updatedCartItems)
+      }
+
+      if (value === 'dec') {
+        if (foundProduct.quantity === 1) {
+          onRemove(foundProduct)
+        }
+        if (foundProduct.quantity > 1) {
+          const updatedCartItems = cartItems.map((item) => {
+            if (item._id === id) {
+              return { ...item, quantity: item.quantity - 1 }
+            }
+            return item
+          })
+          setCartItems(updatedCartItems)
+        }
+      }
+    }
+  }
+
   return (
     <Context.Provider
       value={{
@@ -65,6 +112,8 @@ export const StateContext = ({ children }: Props) => {
         totalPrice,
         setShowCart,
         onAdd,
+        onRemove,
+        toggleCartItemQuantity,
       }}
     >
       {children}
