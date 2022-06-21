@@ -84,6 +84,8 @@ export const StateContext = ({ children }: Props) => {
           return item
         })
         setCartItems(updatedCartItems)
+        setTotalPrice(totalPrice + foundProduct.price)
+        setTotalQuantities(totalQuantities + 1)
       }
 
       if (value === 'dec') {
@@ -98,6 +100,8 @@ export const StateContext = ({ children }: Props) => {
             return item
           })
           setCartItems(updatedCartItems)
+          setTotalPrice(totalPrice - foundProduct.price)
+          setTotalQuantities(totalQuantities - 1)
         }
       }
     }
