@@ -11,10 +11,12 @@ interface ICartItems extends IProduct {
 }
 
 interface IContext {
+  showMenu: boolean
   showCart: boolean
   totalQuantities: number
   cartItems: ICartItems[]
   totalPrice: number
+  setShowMenu: React.Dispatch<React.SetStateAction<boolean>>
   setShowCart: React.Dispatch<React.SetStateAction<boolean>>
   onAdd: (product: IProduct, qty: number) => void
   onRemove: (product: IProduct) => void
@@ -24,6 +26,7 @@ interface IContext {
 const Context = createContext({} as IContext)
 
 export const StateContext = ({ children }: Props) => {
+  const [showMenu, setShowMenu] = useState(false)
   const [showCart, setShowCart] = useState(false)
   const [cartItems, setCartItems] = useState<ICartItems[]>([])
   const [totalPrice, setTotalPrice] = useState(0)
@@ -110,10 +113,12 @@ export const StateContext = ({ children }: Props) => {
   return (
     <Context.Provider
       value={{
+        showMenu,
         showCart,
         totalQuantities,
         cartItems,
         totalPrice,
+        setShowMenu,
         setShowCart,
         onAdd,
         onRemove,
