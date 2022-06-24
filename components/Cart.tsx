@@ -12,6 +12,7 @@ import {
 
 import { useStateContext } from '../context/StateContext'
 import { urlFor } from '../lib/client'
+import getStripe from '../lib/getStripe'
 
 const Cart = () => {
   const cartRef = useRef(null)
@@ -23,6 +24,27 @@ const Cart = () => {
     toggleCartItemQuantity,
     onRemove,
   } = useStateContext()
+
+  const handleCheckout = async () => {
+    const stripe = await getStripe()
+
+    const response = await fetch('/api/stripe', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(cartItems),
+    })
+
+    if (response.status === 500) return
+
+    const data = await response.json()
+    console.log(data)
+
+    toast.loading('Redirecting...')
+
+    stripe.redirectToCheckout({ sessionId: data.id })
+  }
 
   return (
     <div className="cart-wrapper" ref={cartRef}>
@@ -120,6 +142,7 @@ const Cart = () => {
                 <button
                   type="button"
                   className="mx-5 w-full rounded-lg bg-[#635bff] py-3 font-bold tracking-wider text-white"
+                  onClick={handleCheckout}
                 >
                   PAY WITH STRIPE
                 </button>
