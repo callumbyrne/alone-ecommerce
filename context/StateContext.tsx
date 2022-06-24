@@ -18,6 +18,9 @@ interface IContext {
   totalPrice: number
   setShowMenu: React.Dispatch<React.SetStateAction<boolean>>
   setShowCart: React.Dispatch<React.SetStateAction<boolean>>
+  setCartItems: React.Dispatch<React.SetStateAction<Array<ICartItems>>>
+  setTotalPrice: React.Dispatch<React.SetStateAction<number>>
+  setTotalQuantities: React.Dispatch<React.SetStateAction<number>>
   onAdd: (product: IProduct, qty: number) => void
   onRemove: (product: IProduct) => void
   toggleCartItemQuantity: (id: string, value: 'inc' | 'dec') => void
@@ -123,6 +126,9 @@ export const StateContext = ({ children }: Props) => {
         onAdd,
         onRemove,
         toggleCartItemQuantity,
+        setCartItems,
+        setTotalPrice,
+        setTotalQuantities,
       }}
     >
       {children}
