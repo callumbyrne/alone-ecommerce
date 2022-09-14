@@ -6,7 +6,7 @@ import skyBg from '../public/skybackground.webp'
 
 const HeroBanner = () => {
   return (
-    <div className="md:mb-40 md:flex md:bg-[url('../public/skybackground.webp')]">
+    <div className="md:mb-40 md:flex md:bg-[url('../public/skybackground.webp')] lg:px-5">
       <div className="relative h-[400px] md:ml-20 md:w-full md:translate-y-5">
         <Image
           src={heroImage}
@@ -18,7 +18,7 @@ const HeroBanner = () => {
         />
       </div>
 
-      <div className="right-side md:flex md:flex-col-reverse md:text-white">
+      <div className="right-side md:flex md:flex-col-reverse md:text-white lg:ml-3">
         <div className="flex flex-col items-center justify-center">
           <div className="absolute -translate-y-[100px] md:-translate-y-20">
             <Image src={star} alt="spinning star" height={80} width={80} />

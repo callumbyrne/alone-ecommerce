@@ -3,19 +3,21 @@ const Newsletter = () => {
 
   return (
     <div className="flex flex-col items-center justify-center bg-[#d3d327] py-20 text-white">
-      <h2 className="text-3xl font-bold tracking-wider">Stay up to date</h2>
-      <h3 className="pb-3 text-sm tracking-wider">
+      <h2 className="text-3xl font-bold tracking-wider lg:mb-2 lg:text-4xl">
+        Stay up to date
+      </h2>
+      <h3 className="pb-3 text-sm tracking-wider lg:mb-1">
         Sunglasses, sales, giveaways & more!
       </h3>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="lg:text-lg">
         <input
           type="email"
           placeholder="Ur email here :)"
-          className="w-3/5 py-2 pl-2 text-gray-600 placeholder-gray-600"
+          className="w-3/5 py-2 pl-2 text-gray-600 placeholder-gray-600 lg:py-3"
         />
         <button
           type="submit"
-          className="w-2/5 bg-purple-300 py-2 font-bold tracking-wider"
+          className="w-2/5 bg-purple-300 py-2 font-bold tracking-wider lg:py-3 lg:px-3"
         >
           Subscribe
         </button>
