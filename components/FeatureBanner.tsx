@@ -6,7 +6,7 @@ import Link from 'next/link'
 const FeatureBanner = () => {
   return (
     <div className="mb-12 bg-[#d3d327]">
-      <div className="relative mx-7 h-[450px] -translate-y-3">
+      <div className="relative mx-7 h-[450px] -translate-y-3 md:mx-28 md:h-[600px]">
         <Image
           src={image1}
           alt="feature image 1"
@@ -22,7 +22,7 @@ const FeatureBanner = () => {
           </button>
         </Link>
       </div>
-      <div className="relative mx-7 h-[450px] translate-y-3">
+      <div className="relative mx-7 h-[450px] translate-y-3 md:mx-28 md:h-[600px]">
         <Image
           src={image2}
           alt="feature image 2"

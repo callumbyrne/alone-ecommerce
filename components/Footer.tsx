@@ -4,23 +4,25 @@ import logo from '../public/logo.png'
 const Footer = () => {
   return (
     <div className="bg-[#f0f1f2] pt-20 text-center text-lg tracking-widest">
-      <div className="pb-20">
-        <h2 className="pb-2 font-bold text-gray-800">Shop</h2>
-        <ul className="font-normal leading-relaxed text-gray-600">
-          <li>Best Sellers</li>
-          <li>Featured</li>
-          <li>All</li>
-        </ul>
-      </div>
+      <section className="md:flex md:justify-center md:text-left">
+        <div className="pb-20 md:mr-20">
+          <h2 className="pb-2 font-bold text-gray-800">Shop</h2>
+          <ul className="font-normal leading-relaxed text-gray-600">
+            <li>Best Sellers</li>
+            <li>Featured</li>
+            <li>All</li>
+          </ul>
+        </div>
 
-      <div className="pb-20">
-        <h2 className="pb-2 font-bold text-gray-800">About</h2>
-        <ul className="font-normal leading-relaxed text-gray-600">
-          <li>About Us</li>
-          <li>Contact</li>
-          <li>Shipping and Returns</li>
-        </ul>
-      </div>
+        <div className="pb-20">
+          <h2 className="pb-2 font-bold text-gray-800">About</h2>
+          <ul className="font-normal leading-relaxed text-gray-600">
+            <li>About Us</li>
+            <li>Contact</li>
+            <li>Shipping and Returns</li>
+          </ul>
+        </div>
+      </section>
 
       <div className="flex flex-col items-center bg-[#545454] py-20 text-white">
         <div className="block w-32 cursor-pointer pb-5">

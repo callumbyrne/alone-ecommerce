@@ -63,15 +63,17 @@ const Cart = () => {
         </button>
 
         {cartItems.length < 1 && (
-          <div className="empty-cart m-10 flex flex-col items-center">
+          <div className="empty-cart m-8 flex flex-col items-center">
             <ShoppingBagIcon className="h-36 w-36" />
-            <h3 className="mb-3 font-semibold">Your shopping bag is empty</h3>
+            <h3 className="mb-3 text-sm font-semibold">
+              Your shopping bag is empty
+            </h3>
             <button
               type="button"
               onClick={() => setShowCart(false)}
-              className="rounded-lg bg-red-500 px-10 py-2 font-semibold text-white"
+              className="w-full rounded-lg bg-red-500 py-2 text-sm font-semibold text-white"
             >
-              Continue Shopping
+              CONTINUE SHOPPING
             </button>
           </div>
         )}

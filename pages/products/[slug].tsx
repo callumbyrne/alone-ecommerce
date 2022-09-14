@@ -31,15 +31,17 @@ const ProductDetails = ({ product, carouselProducts, variants }: Props) => {
   return (
     <div>
       {/* Main image */}
-      <div className="relative h-[300px]">
-        <Image
-          src={urlFor(mainImage).url()}
-          alt={product.name}
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          quality={100}
-        />
+      <div className="flex justify-center">
+        <div className="relative h-[300px] md:w-[450px]">
+          <Image
+            src={urlFor(mainImage).url()}
+            alt={product.name}
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+            quality={100}
+          />
+        </div>
       </div>
       {/* Image previews */}
       <PreviewCarousel images={product.image} setMainImage={setMainImage} />
@@ -82,7 +84,7 @@ const ProductDetails = ({ product, carouselProducts, variants }: Props) => {
       {/* Variants */}
       <div className="mx-10 mb-5">
         <h2 className="font-bold tracking-wider">More colors:</h2>
-        <div className="flex flex-row flex-wrap">
+        <div className="flex flex-row">
           {filteredVariants.map((variant) => (
             <Link key={variant._id} href={`/products/${variant.slug.current}`}>
               <div className="relative h-[100px] w-[150px]">

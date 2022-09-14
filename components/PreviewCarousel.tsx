@@ -32,7 +32,7 @@ const PreviewCarousel = ({ images, setMainImage }: IProps) => {
         loopFillGroupWithBlank={true}
         navigation={true}
         modules={[Navigation]}
-        className="mySwiper"
+        className="mySwiper md:w-4/5"
         breakpoints={{
           640: {
             slidesPerView: 2,
@@ -40,7 +40,7 @@ const PreviewCarousel = ({ images, setMainImage }: IProps) => {
           },
           768: {
             slidesPerView: 3,
-            spaceBetween: 40,
+            spaceBetween: 30,
           },
           1024: {
             slidesPerView: 3,
