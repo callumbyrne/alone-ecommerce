@@ -7,7 +7,7 @@ const FeatureBanner = () => {
   return (
     <div className="mb-12 bg-[#d3d327] lg:flex lg:justify-center lg:pb-5">
       <div>
-        <div className="relative mx-7 h-[450px] -translate-y-3 md:mx-28 md:h-[600px] lg:mx-0 lg:h-[490px] lg:w-[390px] lg:-translate-y-8 xl:h-[690px] xl:w-[550px]">
+        <div className="relative mx-7 mb-5 h-[450px] -translate-y-3 md:mx-28 md:h-[600px] lg:mx-0 lg:mb-0 lg:h-[490px] lg:w-[390px] lg:-translate-y-8 xl:h-[690px] xl:w-[550px]">
           <Image
             src={image1}
             alt="feature image 1"

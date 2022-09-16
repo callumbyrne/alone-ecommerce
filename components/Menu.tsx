@@ -36,7 +36,7 @@ const Menu = () => {
               <li onClick={clickHandler}>Featured</li>
             </Link>
             <Link href={'/collections/all'}>
-              <li onClick={clickHandler}>All</li>
+              <li onClick={clickHandler}>Shop All</li>
             </Link>
           </ul>
         </div>
