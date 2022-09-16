@@ -7,7 +7,7 @@ const FeatureBanner = () => {
   return (
     <div className="mb-12 bg-[#d3d327] lg:flex lg:justify-center lg:pb-5">
       <div>
-        <div className="relative mx-7 h-[450px] -translate-y-3 md:mx-28 md:h-[600px] lg:mx-0 lg:h-[490px] lg:w-[390px] lg:-translate-y-8">
+        <div className="relative mx-7 h-[450px] -translate-y-3 md:mx-28 md:h-[600px] lg:mx-0 lg:h-[490px] lg:w-[390px] lg:-translate-y-8 xl:h-[690px] xl:w-[550px]">
           <Image
             src={image1}
             alt="feature image 1"
@@ -17,7 +17,7 @@ const FeatureBanner = () => {
           />
           <div className="flex h-full items-end justify-center">
             <Link href={'/collections/all'}>
-              <button className="w-56 translate-y-8 rounded-lg bg-[#ca9cff] py-5 px-4 text-lg font-bold tracking-wider text-gray-800">
+              <button className="w-56 translate-y-8 rounded-lg bg-[#ca9cff] py-5 px-4 text-lg font-bold tracking-wider text-gray-800 xl:text-2xl">
                 Featured
               </button>
             </Link>
@@ -25,7 +25,7 @@ const FeatureBanner = () => {
         </div>
       </div>
 
-      <div className="relative mx-7 h-[450px] translate-y-3 md:mx-28 md:h-[600px] lg:mx-0 lg:ml-10 lg:h-[490px] lg:w-[390px] lg:-translate-y-8">
+      <div className="relative mx-7 h-[450px] translate-y-3 md:mx-28 md:h-[600px] lg:mx-0 lg:ml-10 lg:h-[490px] lg:w-[390px] lg:-translate-y-8 xl:h-[690px] xl:w-[550px]">
         <Image
           src={image2}
           alt="feature image 2"
@@ -36,7 +36,7 @@ const FeatureBanner = () => {
 
         <div className="flex h-full items-end justify-center">
           <Link href={'/collections/all'}>
-            <button className="w-56 translate-y-8 rounded-lg bg-[#e6ff7b] py-5 px-4 text-lg font-bold tracking-wider text-gray-800">
+            <button className="w-56 translate-y-8 rounded-lg bg-[#e6ff7b] py-5 px-4 text-lg font-bold tracking-wider text-gray-800 xl:text-2xl">
               Best Sellers
             </button>
           </Link>

@@ -11,7 +11,7 @@ const CarouselCard = ({ product }: Props) => {
   return (
     <Link href={`/products/${product.slug.current}`}>
       <div className="flex flex-col items-center justify-center">
-        <div className="relative h-[150px] w-[300px]">
+        <div className="relative h-[150px] w-[300px] xl:h-[200px] xl:w-[400px]">
           <Image
             src={urlFor(product.image[0]).url()}
             alt={product.name}

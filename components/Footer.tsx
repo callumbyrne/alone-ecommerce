@@ -3,7 +3,7 @@ import logo from '../public/logo.png'
 
 const Footer = () => {
   return (
-    <div className="bg-[#f0f1f2] pt-20 text-center text-lg tracking-widest">
+    <div className="bg-[#f0f1f2] pt-20 text-center text-lg tracking-widest xl:text-xl">
       <section className="md:flex md:justify-center md:text-left">
         <div className="pb-20 md:mr-20">
           <h2 className="pb-2 font-bold text-gray-800">Shop</h2>
