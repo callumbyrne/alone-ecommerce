@@ -47,9 +47,15 @@ const Cart = () => {
   }
 
   return (
-    <div className="cart-wrapper" ref={cartRef}>
-      <div className="cart-side" onClick={() => setShowCart(false)}></div>
-      <div className="cart-container">
+    <div
+      className="cart-wrapper fixed z-50 w-screen transition-all"
+      ref={cartRef}
+    >
+      <div
+        className="cart-side fixed inset-y-0 w-screen bg-black bg-opacity-50"
+        onClick={() => setShowCart(false)}
+      ></div>
+      <div className="cart-container fixed inset-y-0 right-0 float-right flex h-screen w-4/5 flex-col overflow-y-scroll bg-white py-10 px-3 md:w-1/2 xl:w-1/3">
         <button
           type="button"
           className="cart-heading flex flex-row items-center"

@@ -23,7 +23,7 @@ interface IProps {
 
 const PreviewCarousel = ({ images, setMainImage }: IProps) => {
   return (
-    <div className="mb-10 border">
+    <div className="mb-10 w-full border lg:border-0">
       <Swiper
         slidesPerView={2}
         spaceBetween={0}
@@ -32,7 +32,7 @@ const PreviewCarousel = ({ images, setMainImage }: IProps) => {
         loopFillGroupWithBlank={true}
         navigation={true}
         modules={[Navigation]}
-        className="mySwiper md:w-4/5"
+        className="mySwiper xl:w-2/3"
         breakpoints={{
           640: {
             slidesPerView: 2,

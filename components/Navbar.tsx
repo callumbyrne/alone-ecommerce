@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="flex h-7 items-center justify-center bg-[#f6cbff] text-xs font-medium tracking-wider">
         Wear Alone, or with friends!
       </div>
-      <div className="flex flex-row py-4 px-4 md:py-6 lg:py-8 lg:px-6 xl:py-10">
+      <div className="flex flex-row py-4 px-4 lg:px-6 xl:py-6 xl:px-10">
         <button
           className="w-1/3 lg:hidden"
           type="button"
@@ -30,13 +30,13 @@ const Navbar = () => {
               <a className="hover:text-gray-500">Shop</a>
             </Link>
             <div className="absolute z-10 hidden whitespace-nowrap bg-white py-3 pl-3 pr-16 group-hover:block">
-              <Link href={'/collection/all'}>
+              <Link href={'/collections/all'}>
                 <a className="block py-1 hover:text-gray-500">Best Sellers</a>
               </Link>
-              <Link href={'/collection/all'}>
+              <Link href={'/collections/all'}>
                 <a className="block py-1 hover:text-gray-500">Featured</a>
               </Link>
-              <Link href={'/collection/all'}>
+              <Link href={'/collections/all'}>
                 <a className="block py-1 hover:text-gray-500">Shop All</a>
               </Link>
             </div>
@@ -46,13 +46,13 @@ const Navbar = () => {
               <a>About</a>
             </Link>
             <div className="absolute z-10 hidden whitespace-nowrap bg-white py-3 pl-3 pr-16 group-hover:block">
-              <Link href={'/collection/all'}>
+              <Link href={''}>
                 <a className="block py-1 hover:text-gray-500">About Us</a>
               </Link>
-              <Link href={'/collection/all'}>
+              <Link href={''}>
                 <a className="block py-1 hover:text-gray-500">Contact</a>
               </Link>
-              <Link href={'/collection/all'}>
+              <Link href={''}>
                 <a className="block py-1 hover:text-gray-500">
                   Shipping and Returns
                 </a>

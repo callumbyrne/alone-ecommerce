@@ -10,7 +10,7 @@ const Menu = () => {
   return (
     <div className="menu-wrapper">
       <div className="menu-side" onClick={clickHandler}></div>
-      <div className="menu-container">
+      <div className="menu-container pt-12 pl-4 md:pl-10">
         <button type="button" className="w-max">
           <XIcon className="h-7 w-7" onClick={clickHandler} />
         </button>

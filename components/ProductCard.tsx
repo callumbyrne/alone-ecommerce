@@ -10,13 +10,13 @@ interface Props {
 const ProductCard = ({ product }: Props) => {
   return (
     <Link href={`/products/${product.slug.current}`}>
-      <div className="flex w-1/2 flex-col items-center justify-center">
+      <div className="flex w-1/2 flex-col items-center justify-center md:w-1/3 lg:px-8 xl:px-10 xl:py-10">
         <div className="relative h-[150px] w-full">
           <Image
             src={urlFor(product.image[0]).url()}
             alt={product.name}
             layout="fill"
-            objectFit="scale-down"
+            objectFit="cover"
             objectPosition="center"
             quality={100}
           />

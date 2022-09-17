@@ -2,12 +2,11 @@ import Image from 'next/image'
 import heroImage from '../public/glasses_pool.png'
 import star from '../public/star.gif'
 import Link from 'next/link'
-import skyBg from '../public/skybackground.webp'
 
 const HeroBanner = () => {
   return (
     <div className="md:mb-40 md:flex md:bg-[url('../public/skybackground.webp')] lg:px-5 xl:items-center">
-      <div className="relative h-[400px] md:ml-20 md:w-full md:translate-y-5 xl:ml-32 xl:h-[650px]">
+      <div className="relative h-[400px] md:ml-20 md:w-full md:translate-y-5 xl:ml-32 xl:h-[550px]">
         <Image
           src={heroImage}
           alt="hero image"
